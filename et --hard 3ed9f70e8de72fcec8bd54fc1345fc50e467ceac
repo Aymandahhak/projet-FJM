@@ -1,0 +1,116 @@
+[33mcommit 43e45703bd5e33103e0ac7b5caf56ae6fac235a7[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m
+Merge: 094619b 0032d95
+Author: AZZEDINE-RIH <azzedinerih2001@gmail.com>
+Date:   Wed Dec 18 19:30:36 2024 +0100
+
+    i fix the conflicts
+
+[33mcommit 094619b3a88f4152d85deba913838808dc2c5740[m
+Author: AZZEDINE-RIH <azzedinerih2001@gmail.com>
+Date:   Wed Dec 18 19:22:31 2024 +0100
+
+    i changed the name of my index to indexAdmin
+
+[33mcommit 8c2f3aaacdbd5030606e754ccd6729af902936d6[m[33m ([m[1;31morigin/main[m[33m)[m
+Author: Aymandahhak <153468098+Aymandahhak@users.noreply.github.com>
+Date:   Wed Dec 18 14:17:23 2024 +0100
+
+    Add files via upload
+    
+    version initial de profile joueur
+
+[33mcommit 3ed9f70e8de72fcec8bd54fc1345fc50e467ceac[m
+Author: AZZEDINE-RIH <azzedinerih2001@gmail.com>
+Date:   Mon Dec 16 18:32:41 2024 +0100
+
+    Your commit message describing the changes
+
+[33mcommit 6ce3da333cc4d9a5675225a3a54f3c0253743e16[m
+Merge: bb6ebb9 d0784b6
+Author: AZZEDINE-RIH <azzedinerih2001@gmail.com>
+Date:   Sun Dec 1 23:51:09 2024 +0100
+
+    Merge branch 'main' of https://github.com/AZZEDINE-RIH/Projet_Formation_joueur
+
+[33mcommit bb6ebb95acb5ac32df7d0ccb98b63e16a9f132dc[m
+Author: AZZEDINE-RIH <azzedinerih2001@gmail.com>
+Date:   Sun Dec 1 23:49:35 2024 +0100
+
+    modification sur index.php
+
+[33mcommit 82aee696fc28c9f4b3d6e2af3a0425c96c98deff[m
+Author: AZZEDINE-RIH <azzedinerih2001@gmail.com>
+Date:   Sun Dec 1 23:48:42 2024 +0100
+
+    modification on index.php
+
+[33mcommit d0784b6b7cac1572b39af541a2da1eab4abc546d[m
+Author: RIH AZZEDINE <125825467+AZZEDINE-RIH@users.noreply.github.com>
+Date:   Wed Nov 27 01:16:20 2024 +0100
+
+    Update README.md
+    
+    ReadMe modification
+
+[33mcommit 8efda7afb09068ee5656f7654ac52c9d4be9efca[m
+Merge: 42e3a7a fb1d391
+Author: AZZEDINE-RIH <azzedinerih2001@gmail.com>
+Date:   Wed Nov 27 00:23:08 2024 +0100
+
+    Reinitialized git repository and added changes
+
+[33mcommit 42e3a7a3e038e6202480a1748f7a936da42d9a0e[m[33m ([m[1;32mmaster[m[33m)[m
+Author: AZZEDINE-RIH <azzedinerih2001@gmail.com>
+Date:   Wed Nov 27 00:00:52 2024 +0100
+
+    Replace all files with new content
+
+[33mcommit fb1d3916757e51253a73e398aeefcbc495b4175a[m
+Author: RIH AZZEDINE <125825467+AZZEDINE-RIH@users.noreply.github.com>
+Date:   Tue Nov 26 21:32:56 2024 +0100
+
+    Update README.md
+    
+    un changement de contenue de ReadMe
+
+[33mcommit 4950a4e71f411af3280b5286a80c8ada96747f51[m[33m ([m[1;31morigin/Home_préinscription[m[33m)[m
+Author: AZZEDINE-RIH <azzedinerih2001@gmail.com>
+Date:   Mon Nov 18 00:13:39 2024 +0100
+
+    modification de README
+
+[33mcommit 0032d957fdbdac253c72f8cd1aade0d1ec3b50cd[m[33m ([m[1;31morigin/projet-entaraineur[m[33m)[m
+Author: Aymane-all <aymaneel560@gmail.com>
+Date:   Sun Nov 17 22:58:58 2024 +0100
+
+    Add files via upload
+
+[33mcommit 054044bec4345fe41c93dd9747a39689c38a9766[m
+Author: Aymane-all <aymaneel560@gmail.com>
+Date:   Sun Nov 17 22:55:52 2024 +0100
+
+    Add files via upload
+
+[33mcommit e37677da2fe67491da1fa9b7e34a3a0cf92107f7[m
+Author: AZZEDINE-RIH <azzedinerih2001@gmail.com>
+Date:   Sun Nov 17 17:34:42 2024 +0100
+
+    je supprime la page admin.php
+
+[33mcommit c962b3d13c41c7ef47b331048bb7f52ed8a2aede[m
+Author: AZZEDINE-RIH <azzedinerih2001@gmail.com>
+Date:   Sun Nov 17 16:40:20 2024 +0100
+
+    la deuxieme commit
+
+[33mcommit e196fcd35e49fc419910059ed40a5f32bfce89c8[m
+Author: AZZEDINE-RIH <azzedinerih2001@gmail.com>
+Date:   Sun Nov 17 02:23:17 2024 +0100
+
+    la premier commit
+
+[33mcommit 4b02ca935975511bb5ee29839dc4a2e8a7c7ad83[m
+Author: RIH AZZEDINE <125825467+AZZEDINE-RIH@users.noreply.github.com>
+Date:   Sun Nov 17 02:16:42 2024 +0100
+
+    Initial commit

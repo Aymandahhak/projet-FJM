@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profil Coach avec Terrain de Football 3D</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Roboto', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #1d9ec3, #125d80); /* Dégradé bleu */
+      color: #ffffff;
+    }
+
+    /* Profile Container */
+    .profile-container {
+      position: absolute;
+      top: 50px;
+      left: 20px;
+      z-index: 2;
+      margin-top: 50px;
+      padding: 20px;
+      border-radius: 15px;
+      background: #ffffff;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+      color: #1d9ec3;
+    }
+
+    .profile-photo img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      border: 5px solid #d1d3d4;
+      object-fit: cover;
+      margin: 0 auto;
+    }
+
+    .profile-photo h2 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #1d9ec3;
+      text-align: center;
+    }
+
+    .stats .stat {
+      text-align: center;
+    }
+
+    .stats .stat h3 {
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+
+    .stats .stat p {
+      font-size: 1rem;
+      color: #6c757d;
+    }
+
+    .achievements h3, .skills h3 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 15px;
+      border-bottom: 2px solid #1d9ec3;
+      padding-bottom: 5px;
+    }
+
+    .skills-bar .progress {
+      height: 10px;
+      background: #d1d3d4;
+      border-radius: 5px;
+      overflow: hidden;
+    }
+
+    .skills-bar .progress-bar {
+      background: #1d9ec3;
+    }
+
+    .social-icons a {
+      color: #1d9ec3;
+      font-size: 1.5rem;
+      transition: color 0.3s ease-in-out;
+    }
+
+    .social-icons a:hover {
+      color: #125d80;
+    }
+
+    /* Style pour le terrain */
+    #terrain {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Terrain 3D -->
+<canvas id="terrain"></canvas>
+
+<!-- Profile Content -->
+<div class="container profile-container">
+  <div class="row">
+    <!-- Left Section -->
+    <div class="col-md-5 text-center">
+      <div class="profile-photo">
+        <img src="https://via.placeholder.com/150" alt="Profil">
+        <h2>Jean Dupont</h2>
+        <p class="text-muted">Coach | Football | Stratégie</p>
+      </div>
+      <!-- Stats -->
+      <div class="stats d-flex justify-content-around mt-4">
+        <div class="stat">
+          <h3>22</h3>
+          <p>Matchs gagnés</p>
+        </div>
+        <div class="stat">
+          <h3>15</h3>
+          <p>Équipes entraînées</p>
+        </div>
+        <div class="stat">
+          <h3>5</h3>
+          <p>Trophées</p>
+        </div>
+      </div>
+      <!-- Social Links -->
+      <div class="social-icons mt-4 d-flex justify-content-center gap-3">
+        <a href="#"><i class="bi bi-facebook"></i></a>
+        <a href="#"><i class="bi bi-twitter"></i></a>
+        <a href="#"><i class="bi bi-linkedin"></i></a>
+        <a href="#"><i class="bi bi-instagram"></i></a>
+      </div>
+    </div>
+
+    <!-- Right Section -->
+    <div class="col-md-7">
+      <div class="achievements mb-4">
+        <h3>Réalisations</h3>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">Championnat National 2020</li>
+          <li class="list-group-item">Entraîneur de l'année 2021</li>
+          <li class="list-group-item">Formation de 10 joueurs professionnels</li>
+        </ul>
+      </div>
+      <div class="skills">
+        <h3>Compétences</h3>
+        <div class="skills-bar mb-3">
+          <span>Stratégie</span>
+          <div class="progress">
+            <div class="progress-bar" style="width: 90%;"></div>
+          </div>
+        </div>
+        <div class="skills-bar mb-3">
+          <span>Leadership</span>
+          <div class="progress">
+            <div class="progress-bar" style="width: 80%;"></div>
+          </div>
+        </div>
+        <div class="skills-bar">
+          <span>Analyse de match</span>
+          <div class="progress">
+            <div class="progress-bar" style="width: 85%;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Bootstrap JS Bundle -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Icons -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+<!-- Three.js pour le Terrain de Football 3D -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+<script>
+// Initialisation de la scène Three.js
+var scene = new THREE.Scene();
+var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+var renderer = new THREE.WebGLRenderer({ canvas: document.getElementById('terrain') });
+renderer.setSize(window.innerWidth, window.innerHeight);
+
+// Création du terrain de football
+var geometry = new THREE.PlaneGeometry(500, 300);
+var material = new THREE.MeshBasicMaterial({ color: 0x4caf50 }); // Couleur verte du terrain
+var terrain = new THREE.Mesh(geometry, material);
+terrain.rotation.x = -Math.PI / 2; // Pour que le terrain soit horizontal
+scene.add(terrain);
+
+// Ajouter des lignes pour les bords du terrain
+function drawLine(startX, startY, endX, endY) {
+  var geometry = new THREE.Geometry();
+  geometry.vertices.push(new THREE.Vector3(startX, 0, startY));
+  geometry.vertices.push(new THREE.Vector3(endX, 0, endY));
+  var material = new THREE.LineBasicMaterial({ color: 0xffffff });
+  var line = new THREE.Line(geometry, material);
+  scene.add(line);
+}
+
+// Lignes du terrain
+drawLine(-250, -150, 250, -150); // Bas
+drawLine(-250, 150, 250, 150);  // Haut
+drawLine(-250, -150, -250, 150); // Gauche
+drawLine(250, -150, 250, 150);   // Droite
+
+// Ajouter des cercles pour les zones
+var circleGeometry = new THREE.CircleGeometry(20, 32);
+var circleMaterial = new THREE.MeshBasicMaterial({ color: 0xffffff, side: THREE.DoubleSide });
+var circle = new THREE.Mesh(circleGeometry, circleMaterial);
+circle.rotation.x = -Math.PI / 2;
+circle.position.set(0, 0, 0); // Centre du terrain
+scene.add(circle);
+
+// Ajouter des lumières
+var light = new THREE.AmbientLight(0x404040); // Lumière douce
+scene.add(light);
+
+var directionalLight = new THREE.DirectionalLight(0xffffff, 1);
+directionalLight.position.set(1, 1, 1).normalize();
+scene.add(directionalLight);
+
+// Position de la caméra
+camera.position.y = 200;
+camera.position.z = 500;
+camera.lookAt(0, 0, 0);
+
+// Animation
+function animate() {
+  requestAnimationFrame(animate);
+  renderer.render(scene, camera);
+}
+
+animate();
+
+// Redimensionner le rendu lors de l'ajustement de la fenêtre
+window.addEventListener('resize', function() {
+  renderer.setSize(window.innerWidth, window.innerHeight);
+  camera.aspect = window.innerWidth / window.innerHeight;
+  camera.updateProjectionMatrix();
+});
+</script>
+
+</body>
+</html>
